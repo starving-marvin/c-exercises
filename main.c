@@ -3,15 +3,14 @@
 
 int main (void) {
 
-    //  Write a C program to get the C version you are using
+    //  Write a C program to print a block F using hash (#), where the F has a height of six characters and width of five and four characters. And also to print a big 'C'
     
-    if (!__STDC_VERSION__) {
-        printf("We are using C90\n");
-    } else if (__STDC_VERSION__ == 199901L) {
-        printf("We are using C99\n");
-    } else if (__STDC_VERSION__ == 201112L) {
-        printf("We are using C11\n");
-    }
+    printf("%-*s\n", 8, "######");
+    printf("%-*s\n%-*s\n", 8, "#", 8, "#");
+    printf("%-*s\n", 8, "#####");
+    printf("%-*s\n%-*s\n%-*s\n", 8, "#", 8, "#", 8, "#");
+
+    printf("\n  ######\n ##\t\b##\n#\n#\n#\n#\n ##\t\b##\n  ######\n");
 
     return EXIT_SUCCESS;
 }
