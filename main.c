@@ -3,16 +3,15 @@
 
 int main (void) {
 
-    //  Write a C program to print your name, date of birth, and mobile number (Exercise 1)
-    char* name_label = "Name";
-    char* dob_label = "DOB";
-    char* tel_label = "Mobile";
+    //  Write a C program to get the C version you are using
     
-    char* name = "Jack the Ripper";
-    char* dob = "August 17 1888";
-    char* tel = "44-6668889";
-
-    printf("%-7s : %s\n%-7s : %s\n%-7s : %s\n", name_label, name, dob_label, dob, tel_label, tel);
+    if (!__STDC_VERSION__) {
+        printf("We are using C90\n");
+    } else if (__STDC_VERSION__ == 199901L) {
+        printf("We are using C99\n");
+    } else if (__STDC_VERSION__ == 201112L) {
+        printf("We are using C11\n");
+    }
 
     return EXIT_SUCCESS;
 }
