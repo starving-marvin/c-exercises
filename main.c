@@ -4,13 +4,17 @@
 int main (void) {
 
     //  Write a C program to get the C version you are using
+    switch (__STDC_VERSION__) {
+        case 199901L:
+            printf("We are using C99!\n");
+            break ;
+
+        case 201112L:
+            printf("We are using C11!\n");
+            break ;
     
-    if (!__STDC_VERSION__) {
-        printf("We are using C90\n");
-    } else if (__STDC_VERSION__ == 199901L) {
-        printf("We are using C99\n");
-    } else if (__STDC_VERSION__ == 201112L) {
-        printf("We are using C11\n");
+        default:
+            printf("We are using C90!\n");
     }
 
     return EXIT_SUCCESS;
